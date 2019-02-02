@@ -6,6 +6,12 @@ The main purpose of this program is **data archival**.
 The only required argument for the script is --url="4chan/4channel.org http/https URL here"
 By default, the program will scan for all images(excluding thumbnails) on the thread, create a folder in the same directory the script is in, and place all downloaded images and webms there.
 
+The simplest way to execute:
+```console
+$ python main.py --url="https://www.4chan.org/g/43252/qqqqqqdsa" 
+```
+The program will take care of folder management. (each thread gets its own folder)
+
 ## Wget
 This script can be used in conjunction with wget. To do this, first use --output"urls.txt" to output a text file of all images scanned in the thread. Next, prevent the program from downloading by adding --no-dl. This will cause the program to just scan the urls of the images and dump them all to a file. Use "wget -i url.txt" to download all the pictures.
 
