@@ -13,6 +13,11 @@ This script can be used in conjunction with wget. To do this, first use --output
 1. requests
 2. BeautifulSoup
 
+## Download resumption
+When the program encounters a file that is already saved to disk, it does not download it again. In the case that you download the same thread twice, it will only download new images.
+
+In the case that a download fails for a picture, it is discarded. You can run the program again to download that particular picture.
+
 ## Warning
 Do not be stupid. Do not use this to overload 4chan servers or cause excessive amounts of bandwidth to be used. I will not be responsible for how you use the software.
 
