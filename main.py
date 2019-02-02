@@ -96,7 +96,18 @@ def main(cargs):
         for url in filtered_imgs_url:
             fname = url.split('/')[-1] #get filename
             print("DL: ", fname, ", ", cnt, "/",len(filtered_imgs_url))
-            urllib.request.urlretrieve(url, folder_name + '/' + fname)
+            save_path = folder_name + '/' + fname
+            if not os.path.exists(save_path): #do not save images already there
+                try:
+                    urllib.request.urlretrieve(url, save_path)
+                except:
+                    if os.path.exists(save_path): #do not keep broken files
+                        os.remove(save_path)
+                    print("File failed to download.")
+                else:
+                    print("OK")
+            else:
+                print("File skipped(already exists).")
             cnt = cnt + 1
             if TIMEOUT > 0:
                 time.sleep(TIMEOUT)
