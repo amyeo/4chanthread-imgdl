@@ -1,11 +1,3 @@
-"""
-Command line arguments and options
-1. dump URLS to text file (for use with wget)
-2. url
-3. user agent
-4. timeout (pause between downloads)
-5. do not use https (uses https by default)
-"""
 import sys
 import getopt
 import requests
@@ -41,7 +33,13 @@ def main(cargs):
 
     for currArg, currVal in options:
         if currArg == "--help":
-            print("you have been helped.")
+            print("4chanthread-imgdl Help: ")
+            print("--output=\"output .txt file for URLs. For use with wget -i\"")
+            print("--url=\"4chan or 4channel http or https URL goes here\" [REQUIRED]")
+            print("--http Use HTTP instead of HTTPS")
+            print("--user-agent=\"user agent string\" Specify your own user agent string")
+            print("--no-dl Parse the thread, but do not download anything. For use with --output=")
+            print("--timeout=\"int\" Specifies the time to wait (in seconds) between each image download")
             sys.exit(0)
         elif currArg == "--output":
             URL_OUTPUT_FILE_NAME = currVal
