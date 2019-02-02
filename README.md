@@ -9,6 +9,10 @@ By default, the program will scan for all images(excluding thumbnails) on the th
 ## Wget
 This script can be used in conjunction with wget. To do this, first use --output"urls.txt" to output a text file of all images scanned in the thread. Next, prevent the program from downloading by adding --no-dl. This will cause the program to just scan the urls of the images and dump them all to a file. Use "wget -i url.txt" to download all the pictures.
 
+## Prerequisites
+1. requests
+2. BeautifulSoup
+
 ## Warning
 Do not be stupid. Do not use this to overload 4chan servers or cause excessive amounts of bandwidth to be used. I will not be responsible for how you use the software.
 
