@@ -1,6 +1,6 @@
-# 4chanthread-imgdl
+# 4chan Thread Image Downloader (4chanthread-imgdl)
 Python3 script to download all full resolution images, webms in a 4chan thread. This includes images tagged as spoilers.
-The main purpose of this program is data archival.
+The main purpose of this program is **data archival**.
 
 ## How it works
 The only required argument for the script is --url="4chan/4channel.org http/https URL here"
