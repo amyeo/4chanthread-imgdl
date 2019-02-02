@@ -79,7 +79,7 @@ def main(cargs):
     if DUMP_URLS_TO_FILE:
         write_to_file(filtered_imgs_url,URL_OUTPUT_FILE_NAME)
 
-    #quit here of download disabled.
+    #quit here if download disabled.
     if DOWNLOAD_IMGS:
         #create folder here first
         #for foldername, get numerical code + thread name
