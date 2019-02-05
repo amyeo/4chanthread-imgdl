@@ -53,7 +53,7 @@ def main(cargs):
         elif currArg == "--no-dl":
             DOWNLOAD_IMGS = False
         elif currArg == "--timeout":
-            TIMEOUT = currVal
+            TIMEOUT = int(currVal)
 
     #check validity of variables here (in particulat if url is blank)
     if URL == '':
